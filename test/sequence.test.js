@@ -16,10 +16,7 @@ mongoose.Promise = global.Promise;
 const DB_URL = process.env.MONGODB_TEST_URL || 'mongodb://127.0.0.1/mongoose-sequence-testing';
 
 describe('Basic => ', () => {
-  beforeAll(() => {
-    mongoose.set('useCreateIndex', true);
-    mongoose.set('useFindAndModify', false);
-  });
+  beforeAll(() => {});
 
   describe('General', () => {
     it('must be instantiated passing mongoose', () => {
@@ -28,7 +25,7 @@ describe('Basic => ', () => {
     });
 
     it('can pass a generic connection', (done) => {
-      const connection = mongoose.createConnection(DB_URL, { useNewUrlParser: true });
+      const connection = mongoose.createConnection(DB_URL);
       const AI = AutoIncrementFactory(connection);
       const ASchema = new Schema({
         id: Number,
@@ -45,7 +42,7 @@ describe('Basic => ', () => {
     beforeAll((done) => {
       mongoose.connection.on('open', done);
       mongoose.connection.on('error', done);
-      mongoose.connect(DB_URL, { useNewUrlParser: true });
+      mongoose.connect(DB_URL);
     });
 
     afterAll((done) => {

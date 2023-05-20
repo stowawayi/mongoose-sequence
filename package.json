@@ -1,7 +1,7 @@
 {
-  "name": "mongoose-sequence",
-  "version": "5.3.1",
-  "description": "Very generic autoincrement plugin for mongoose",
+  "name": "@stowawayi/mongoose-sequence",
+  "version": "6.0.0",
+  "description": "Updated version of mongoose-sequence, a very generic autoincrement plugin for mongoose",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
@@ -14,24 +14,35 @@
     "mongoose",
     "autoincrement",
     "sequence",
-    "seq"
+    "seq",
+    "modified"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ramiel/mongoose-sequence.git"
   },
   "author": {
-    "name": "Fabrizio Ruggeri",
-    "email": "fabrizio.ruggeri@gmail.com",
-    "url": "http://www.ramielcreations.com/"
+    "name": "Jacob Brown",
+    "email": "stowawayi@gmail.com"
   },
+  "contributors": [
+    {
+      "name": "Fabrizio Ruggeri",
+      "email": "fabrizio.ruggeri@gmail.com",
+      "url": "http://www.ramielcreations.com/"
+    },
+    {
+      "name": "Jacob Brown",
+      "email": "stowawayi@gmail.com"
+    }
+  ],
   "license": "GPL-2.0",
   "dependencies": {
     "async": "^2.5.0",
     "lodash": "^4.17.20"
   },
   "peerDependencies": {
-    "mongoose": ">=4"
+    "mongoose": "^6.0.0"
   },
   "devDependencies": {
     "chai": "^3.3.0",
@@ -41,7 +52,7 @@
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-jest": "^22.7.1",
     "jest": "^26.5.3",
-    "mongoose": "^5.8.3",
+    "mongoose": "^6.11.1",
     "sinon": "^1.17.5"
   },
   "jest": {
